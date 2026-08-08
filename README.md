@@ -1,5 +1,4 @@
 <div align="center">
-  <img src="search.png" alt="Logo" width="80" height="80">
   <h1 align="center">WhatsTheWeather - Weather App</h1>
   <p align="center">
     A beautiful, glassmorphism-styled weather application powered by OpenWeatherMap API.
