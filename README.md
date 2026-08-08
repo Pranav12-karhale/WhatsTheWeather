@@ -4,7 +4,7 @@
     A beautiful, glassmorphism-styled weather application powered by OpenWeatherMap API.
     <br />
     <br />
-    <h2 align="center">[check the app >>](https://whatstheweather-i39y.onrender.com)</h2>
+    <h2 align="center">https://whatstheweather-i39y.onrender.com</h2>
     <br />
   </p>
 </div>
