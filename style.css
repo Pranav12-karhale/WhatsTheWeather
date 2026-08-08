@@ -1,0 +1,226 @@
+:root {
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.8);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-primary);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    transition: background-image 0.8s ease-in-out;
+}
+
+body.theme-clear {
+    background-image: url('backgrd.jpg');
+    background-color: #064c72;
+}
+
+body.theme-clouds {
+    background-image: url('CloudyWeather.jpg');
+    background-color: #313131;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 500px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.head {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 30px;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    max-width: 400px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: var(--glass-shadow);
+    transition: transform 0.3s ease;
+}
+
+.search-box:focus-within {
+    transform: scale(1.02);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.search-box input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    padding: 0.5rem;
+}
+
+.search-box input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.search-box button {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.search-box button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.search-box button img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+}
+
+.error {
+    color: #ff6b6b;
+    font-weight: 600;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    display: none;
+    backdrop-filter: blur(5px);
+}
+
+.hidden {
+    display: none !important;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.glass-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: var(--glass-shadow);
+    padding: 2rem;
+    text-align: center;
+}
+
+.current-weather {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.place {
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+.temperature {
+    font-size: 4.5rem;
+    font-weight: 600;
+    line-height: 1;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+    margin: 0.5rem 0;
+}
+
+.temp-condition {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+}
+
+.condition {
+    text-transform: capitalize;
+}
+
+.extra-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.detail-card {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.detail-card:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.detail-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.detail-value {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+@media (max-width: 400px) {
+    .extra-details {
+        grid-template-columns: 1fr;
+    }
+}

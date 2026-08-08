@@ -1,0 +1,11 @@
+# Environments
+env.js
+.env
+.env.local
+
+# Node
+node_modules/
+
+# Docker
+Dockerfile
+.dockerignore

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body class="theme-clear">
+    <div class="app-container">
+        <header>
+            <h1 class="head">Weather</h1>
+            <div class="search-box">
+                <input type="text" placeholder="Enter location..." id="inp">
+                <button id="searchBtn"><img src="search.png" alt="Search"></button>
+            </div>
+            <div class="error" id="errorMsg">Location not found!</div>
+        </header>
+
+        <main id="mainContent" class="hidden">
+            <section class="current-weather glass-card">
+                <h2 class="place" id="placeName">--</h2>
+                <h1 class="temperature" id="temperature">--°C</h1>
+                <div class="temp-condition">
+                    <span class="condition" id="condition">--</span>
+                    <span class="tempmaxmin" id="tempMaxMin">--° / --°</span>
+                </div>
+            </section>
+
+            <section class="extra-details">
+                <div class="glass-card detail-card">
+                    <span class="detail-label">Humidity</span>
+                    <h2 class="detail-value" id="h1">--%</h2>
+                </div>
+                <div class="glass-card detail-card">
+                    <span class="detail-label">Real Feel</span>
+                    <h2 class="detail-value" id="h2">--°C</h2>
+                </div>
+                <div class="glass-card detail-card">
+                    <span class="detail-label">Wind</span>
+                    <h2 class="detail-value" id="h3">-- km/h</h2>
+                </div>
+                <div class="glass-card detail-card">
+                    <span class="detail-label">Sunrise</span>
+                    <h2 class="detail-value" id="h4">--:--</h2>
+                </div>
+                <div class="glass-card detail-card">
+                    <span class="detail-label">Sunset</span>
+                    <h2 class="detail-value" id="h5">--:--</h2>
+                </div>
+                <div class="glass-card detail-card">
+                    <span class="detail-label">Pressure</span>
+                    <h2 class="detail-value" id="h6">-- hPa</h2>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="env.js"></script>
+    <script src="weather.js"></script>
+</body>
+</html>
