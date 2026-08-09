@@ -4,12 +4,15 @@
     A beautiful, glassmorphism-styled weather application powered by OpenWeatherMap API.
     <br />
     <br />
-    <h2 align="center">https://whatstheweather-i39y.onrender.com</h2>
     <br />
   </p>
 </div>
 
----
+<div align="center">
+
+  # [Check Weather >>](https://whatstheweather-i39y.onrender.com)
+
+</div>
 
 ## 🌤️ About The Project
 
